@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="Ambro_WPF2.Views.CatView_UC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Ambro_WPF2.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid DataContext="{Binding CatProp, Mode=TwoWay, RelativeSource={RelativeSource AncestorType=UserControl}}">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="20">Name:</Label>
+                <TextBox x:Name="tbName" Text="{Binding Path=Name}" FontSize="20" VerticalAlignment="Center"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="20">Age:</Label>
+                <TextBlock x:Name="tbAge" Text="{Binding Path=Age}" FontSize="20" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="20">Weight:</Label>
+                <TextBox x:Name="tbWeight" Text="{Binding Path=Weight}" FontSize="20" VerticalAlignment="Center"></TextBox>
+                <Slider x:Name="slWeight" Width="120" Value="{Binding Path=Weight}" Maximum="30" VerticalAlignment="Center"></Slider>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
